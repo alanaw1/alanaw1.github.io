@@ -77,8 +77,8 @@ Quisque mattis volutpat lorem vitae feugiat.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>This is a test. Hello.
-XMin is the first Hugo theme I have designed. The original reason that I wrote it was I needed a minimal example of Hugo themes when I was writing the blogdown book. Basically I wanted a simple theme that supports a navigation menu, a home page, other single pages, lists of pages, blog posts, categories, tags, and RSS. That is all. Nothing fancy. In terms of CSS and JavaScript, I really want to keep them minimal.</description>
+      <description>Hello! I am a first-year PhD student in the Department of Statistics at the University of California at Berkeley.
+I completed my undergraduate studies in Mathematical and Computational Science (with a Biology minor) at Stanford University, where I was advised by Bradley Efron. I was fortunate to do research in mathematical and computational biology with Noah Rosenberg, Marcus Feldman and Julia Palacios. My projects include modeling evolution, phylogenetics, population genetics and statistical genetics.</description>
     </item>
     
   </channel>
