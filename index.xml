@@ -87,7 +87,7 @@ I completed my undergraduate studies in Mathematical and Computational Science (
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/research/</guid>
-      <description>Hello.</description>
+      <description>Human Evolution Population-Genetic Statistics In the analysis of genetic data, summary statistics are often computed for biological interpretation. For example, single-nucleotide polymorphism (SNP) data is summarized into a sample frequency spectrum (SFS) for the inference of evolutionary or population history. Allele frequency statistics (like homozygosity \(J\) and population differentiation \(F_{ST}\)) reflect levels of genetic homogeneity and admixture. Pairs of summary statistics sometimes share a close mathematical relationship, so that the value of one statistic constrains the value of the other.</description>
     </item>
     
   </channel>
