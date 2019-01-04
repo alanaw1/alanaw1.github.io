@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2019/01/04/lagrange-multipliers-revisited/</loc>
+    <lastmod>2019-01-04T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/note/2017/06/14/another-note/</loc>
     <lastmod>2017-06-14T00:00:00+00:00</lastmod>
   </url>
@@ -48,7 +53,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-04T21:13:14-05:00</lastmod>
   </url>
   
   <url>
@@ -70,6 +75,12 @@
   </url>
   
   <url>
+    <loc>/categories/maths/</loc>
+    <lastmod>2019-01-04T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/note/</loc>
     <lastmod>2017-06-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -83,7 +94,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-04T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -122,8 +133,20 @@
   </url>
   
   <url>
+    <loc>/tags/analysis/</loc>
+    <lastmod>2019-01-04T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/blogdown/</loc>
     <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/optimization/</loc>
+    <lastmod>2019-01-04T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   

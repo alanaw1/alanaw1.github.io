@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lagrange Multipliers Revisited | Alan Aw</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/research/">Research</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lagrange Multipliers Revisited</span></h1>
+
+<h2 class="date">2019/01/04</h2>
+</div>
+
+<main>
+
+
+
+<p>Happy New Year! This is my first post, and I intend to use this space to write about my thoughts and learning. Any constructive feedback would be appreciated!</p>
+<p>Now for the actual post. I’ve been thinking about mathematics over Winter break, mostly because I often find myself overlooking details about important results and as a result learning maths not as thoroughly as I’d like. I find this especially true with regard to analysis (or continuous maths in general), so I try to revisit the maths every now and then. My most recent thoughts were centred on Lagrange multipliers, motivated by coursework in statistics.</p>
+<p>Statistics and optimization share a close relationship, starting with the maximization of the <a href="https://en.wikipedia.org/wiki/Maximum_likelihood_estimation">maximum likelihood estimate</a> in numerous settings, and featuring applications of Bayesian approaches to minimize regret functions in, e.g., <a href="https://ieeexplore.ieee.org/abstract/document/720534/">universal prediction problems</a>, amongst various areas of research. Hence, I wasn’t surprised to learn recently, in the context of theoretical statistics, about how exponential families maximize entropy:</p>
+<p><strong>Theorem 1 (Exponential families maximize entropy).</strong> For a random variable <span class="math inline">\(X\)</span> with density <span class="math inline">\(p\)</span>, let <span class="math display">\[H(p) = \mathbb{E}_p(-\log p(X))=-\int_{\{x:p(x)&gt;0\}} p(x)\log(p(x))d\mu(x).\]</span> Suppose that <span class="math inline">\(\mathbb{E}_p[T(X)]=\alpha\)</span> for some <span class="math inline">\(T:\mathcal{X}\rightarrow \mathbb{R}^s\)</span> and <span class="math inline">\(\alpha\in \text{int}(\text{conv}(T(\mathcal{X})))\)</span>. Let <span class="math inline">\(\eta\in \mathbb{R}^s\)</span> and <span class="math inline">\(p_\eta(x) = \exp(\langle\eta,T(x)\rangle - A(\eta))\)</span> (an <span class="math inline">\(s\)</span>-parameter exponential family). Then <span class="math inline">\(H(p)\)</span> is maximized over the set of all densities <span class="math inline">\(p\)</span> satisfying <span class="math inline">\(\mathbb{E}_p[T(X)]=\alpha\)</span>, by setting <span class="math inline">\(p=p_\eta\)</span> with <span class="math inline">\(\eta\)</span> chosen to satisfy the constraints.</p>
+<p>The proof of Theorem 1 above uses the method of Lagrangian multipliers. In the case of <span class="math inline">\(\mathcal{X}\)</span> finite, we have the Lagrangian <span class="math display">\[L(p,\lambda,\eta_0,\eta_1,\ldots,\eta_s)=\sum_{i=1}^n p_i\log(1/p_i) + \sum_{j=1}^s\left(\alpha_j - \sum_{i=1}^n p_iT_j(x_i)\right) + \eta_0\left(\sum_{i=1}^n p_i - 1\right)-\sum_{i=1}^n \lambda_ip_i,\]</span> which upon setting <span class="math inline">\(\nabla L=0\)</span> (i.e., set the partial derivatives to zero), yields <span class="math display">\[p_\text{opt} = \exp\left(-1 + \sum_{j=1}^s \eta_jT_j(x_i) +\eta_0-\lambda_i\right).\]</span> It’s a straightforward exercise to verify the complementary slackness conditions and to obtain the exponential family as an extremal. The proof of the maximality of this extremal relies on Jensen’s inequality, which completes the argument. The case where <span class="math inline">\(\mathcal{X}\)</span> is infinite (e.g., <span class="math inline">\(\mathcal{X}=\mathbb{R}\)</span>) is more complicated, but at least we were able to verify a special case of Theorem 1 with only the method of Lagrange multipliers and elementary convexity theory at our disposal.</p>
+<div id="what-happens-without-convexity" class="section level1">
+<h1>What happens without convexity?</h1>
+<p>In a sense, we were lucky because the problem involved a convex function. What happens if we minimize (which is, modulo a multiple of <span class="math inline">\(-1\)</span>, equivalent to maximizing) a function <span class="math inline">\(f(x)\)</span> subject to the constraints <span class="math inline">\(F(x)=0\)</span>, where <span class="math inline">\(f\)</span> is smooth but not necessarily convex? In a realistic setting, it is sometimes not possible to inspect the function and to know immediately that it is convex or concave. I read some analysis textbooks and found answers, but none so far has exceeded the clarity of Vladimir Zorich’s presentation<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. In what follows, I summarize his explanation, which I found helpful for my review of the theory of Lagrange multipliers.</p>
+<p>We consider a more general setting, which is to optimize a function <span class="math inline">\(f:D\rightarrow \mathbb{R}\)</span> defined on an open set <span class="math inline">\(D\subset \mathbb{R}^n\)</span> and belonging to <span class="math inline">\(C^p(D;\mathbb{R})\)</span> (<span class="math inline">\(p\geqslant 1\)</span>), subject to <span class="math inline">\(x\in S\)</span> for some smooth surface <span class="math inline">\(S\subset D\)</span>.</p>
+<ul>
+<li>Example 1: <span class="math inline">\(f(x,y,z)=x^2+yz\in C^1(\mathbb{R}^3;\mathbb{R})\)</span> and <span class="math inline">\(S=\{(x,y,z):x+y+z=1\}\)</span>, i.e., we optimize <span class="math inline">\(f\)</span> on the plane <span class="math inline">\(S\)</span>.</li>
+<li>Example 2: More generally, <span class="math inline">\(D=\mathbb{R}^n\)</span> and the surface <span class="math inline">\(S\)</span> is parametrized by the system
+<span class="math display">\[\begin{eqnarray}
+F^1(x_1,\ldots,x_n) &amp; = &amp; 0, \\ \nonumber
+\vdots &amp; \vdots &amp; \vdots \\ \label{system}
+F^m(x_1,\ldots,x_n) &amp; = &amp; 0,\nonumber
+\end{eqnarray}\]</span>
+and we optimize <span class="math inline">\(y=f(x_1,\ldots,x_n)\)</span> over <span class="math inline">\(S\)</span>.</li>
+</ul>
+<p>The following lemma justifies the formulation of the Lagrangian.</p>
+<p><strong>Lemma 2 (Zorich, p. 528)</strong> A necessary condition for a point <span class="math inline">\(x_0\in S\)</span> that is noncritical for <span class="math inline">\(f\)</span> to be a local extremum of <span class="math inline">\(f|_S\)</span> is that <span class="math inline">\(T_{x_0}S\subset T_{x_0}N\)</span>, where <span class="math inline">\(T_{x_0}S\)</span> is the tangent space to the surface <span class="math inline">\(S\)</span> at <span class="math inline">\(x_0\)</span> and <span class="math inline">\(T_{x_0}N\)</span> is the tangent space to the level surface <span class="math inline">\(N=\{x\in D: f(x)=f(x_0)\}\)</span> of <span class="math inline">\(f\)</span> to which <span class="math inline">\(x_0\)</span> belongs.</p>
+<p>The noncriticality of <span class="math inline">\(f(x_0)\)</span> is required for the implicit function theorem to apply and the proof to follow through. However, in downstream applications of the Lagrange multipliers method, this requirement ends up being non-essential. Indeed, if the point <span class="math inline">\(x_0\in D\)</span> were a critical point of the function <span class="math inline">\(f\)</span> or an extremum of the function, it is a potential candidate for extrema of <span class="math inline">\(f|_S\)</span>, the function of interest. The point of noncriticality is that the function <span class="math inline">\(f|_S\)</span> may have critical points and extrema that are different from those of <span class="math inline">\(f\)</span>, and we wish to find these points methodically.</p>
+<p>To prove Lemma 1, we start by choosing any vector <span class="math inline">\(\xi\in T_{x_0}S\)</span>. By definition of tangent space, we can find a smooth path <span class="math inline">\(x=x(t)\)</span> on <span class="math inline">\(S\)</span> passing through <span class="math inline">\(x_0\)</span> at <span class="math inline">\(t=0\)</span> and for which the vector <span class="math inline">\(\xi\)</span> is the velocity at <span class="math inline">\(t=0\)</span>: <span class="math inline">\(dx/dt|_{t=0}=\xi\)</span>. Since <span class="math inline">\(f\)</span> is smooth (at least differentiable) and <span class="math inline">\(x_0\)</span> is an extremum of <span class="math inline">\(f|_S\)</span>, the smooth function <span class="math inline">\(f(x(t))\)</span> has an extremum at <span class="math inline">\(t=0\)</span>, and the chain rule implies <span class="math display">\[f&#39;(x_0)\cdot \xi=0,\]</span> where <span class="math inline">\(f&#39;(x_0)=\left(\frac{\partial f}{\partial x_1},\ldots,\frac{\partial f}{\partial x_n}\right)\)</span>. This last equality is just the equation of the tangent space <span class="math inline">\(T_{x_0}N\)</span>, as long as <span class="math inline">\(f(x_0)\)</span> is not critical, and so <span class="math inline">\(\xi\in T_{x_0}N\)</span>.</p>
+<p>(To be continued…)</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Zorich, Vladimir A. <em>Mathematical analysis I</em>. Springer, 2004.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; Alan Aw 2018 &ndash; 2019 | <a href="https://github.com/alanaw1">Github</a> | <a href="https://twitter.com/youngtableaux">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+
