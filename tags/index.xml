@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>aDNA</title>
+      <link>/tags/adna/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/adna/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>analysis</title>
       <link>/tags/analysis/</link>
       <pubDate>Fri, 04 Jan 2019 21:13:14 -0500</pubDate>
@@ -80,6 +89,24 @@
       <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>books</title>
+      <link>/tags/books/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>history</title>
+      <link>/tags/history/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/history/</guid>
       <description></description>
     </item>
     
