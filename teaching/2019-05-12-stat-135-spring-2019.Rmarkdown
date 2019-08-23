@@ -1,0 +1,24 @@
+---
+title: Stat 135 (Spring 2019)
+author: ''
+slug: stat-135-spring-2019
+---
+
+I served as a GSI for this upper division undergraduate course providing a first introduction to mathematical statistics. Based on problems provided by the Instructor Adam Lucas, I prepared and used slides to facilitate team work during section. I also occasionally wrote notes for students to supplement my in-class teaching. Here is a [thematic summary](../../pdf/stat135/135contentbreakdown.pdf) I typed up for students to strategize for their final exam review. 
+
+- Week 1: Introduction
+- Week 2: Sampling, parametric models / R setup and practice
+- Week 3: MoM estimation / bootstrap practice [[slides]](../../pdf/stat135/02012019.pdf) 
+- Week 4: Maximum likelihood estimation, CRLB [[slides]](../../pdf/stat135/02082019.pdf)
+- Week 5: Sufficiency [[slides]](../../pdf/stat135/02152019.pdf)
+- Week 6: Hypothesis testing, Neyman-Pearson lemma, duality of HT and CI [[slides]](../../pdf/stat135/02222019.pdf) [[notes]](../../pdf/stat135/sufficiency.pdf)
+- Week 7: Comparing two samples: parametric
+- Week 8: (Midterm review) [[jeopardy slides]](../../pdf/stat135/03082019.pdf)
+- Week 9: Likelihood ratio test, UMP test, GLRT [[slides]](../../pdf/stat135/03222019.pdf)
+- Week 10: (Spring break)
+- Week 11: Comparing two samples: non-parametric, chi-square tests
+- Week 12: ANOVA 
+- Week 13: Linear model (single predictor), least squares [[notes]](../../pdf/stat135/linearmodels.pdf)
+- Week 14: Linear model (multiple predictors)
+- Week 15: Bayesian statistics [[slides]](../../pdf/stat135/05032019.pdf)
+
