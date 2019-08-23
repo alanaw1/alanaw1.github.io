@@ -6,10 +6,55 @@
     <description>Recent content in Tags on Alan Aw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>aDNA</title>
+      <link>/tags/adna/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/adna/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>books</title>
+      <link>/tags/books/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>history</title>
+      <link>/tags/history/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>analysis</title>
+      <link>/tags/analysis/</link>
+      <pubDate>Fri, 04 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>optimization</title>
+      <link>/tags/optimization/</link>
+      <pubDate>Fri, 04 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/optimization/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Markdown</title>
@@ -39,38 +84,11 @@
     </item>
     
     <item>
-      <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>RStudio</title>
       <link>/tags/rstudio/</link>
       <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/rstudio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aDNA</title>
-      <link>/tags/adna/</link>
-      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/adna/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>analysis</title>
-      <link>/tags/analysis/</link>
-      <pubDate>Fri, 04 Jan 2019 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/analysis/</guid>
       <description></description>
     </item>
     
@@ -84,29 +102,11 @@
     </item>
     
     <item>
-      <title>books</title>
-      <link>/tags/books/</link>
-      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      <title>R Markdown</title>
+      <link>/tags/r-markdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/tags/books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>history</title>
-      <link>/tags/history/</link>
-      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/history/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>optimization</title>
-      <link>/tags/optimization/</link>
-      <pubDate>Fri, 04 Jan 2019 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/optimization/</guid>
+      <guid>/tags/r-markdown/</guid>
       <description></description>
     </item>
     

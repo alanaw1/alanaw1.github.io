@@ -69,7 +69,7 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>I am a first-year PhD student in the Department of Statistics at the University of California at Berkeley. I am broadly interested in statistical modeling, statistical theory, and their applications to biology and the social sciences.
+      <description>I am a second-year PhD student in the Department of Statistics at the University of California at Berkeley. I am broadly interested in statistical modeling, statistical theory, and their applications to biology and the social sciences.
 I completed my undergraduate studies in Mathematical and Computational Science (with a Biology minor) at Stanford University, where I was advised by Bradley Efron. I was fortunate to do research in mathematical and computational biology with Noah Rosenberg, Marcus Feldman and Julia Palacios.</description>
     </item>
     
@@ -89,7 +89,7 @@ What do we know about our past? The study of human history is, and continues to 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/stat-135-spring-2019/</guid>
-      <description>I serve as a GSI for this upper division undergraduate course providing a first introduction to mathematical statistics. Based on problems provided by the Instructor Adam Lucas, I prepared and used slides to facilitate team work during section. I also occasionally wrote notes for students to supplement my in-class teaching. Here is a thematic summary I typed up for students to strategize for their final exam review.
+      <description>I served as a GSI for this upper division undergraduate course providing a first introduction to mathematical statistics. Based on problems provided by the Instructor Adam Lucas, I prepared and used slides to facilitate team work during section. I also occasionally wrote notes for students to supplement my in-class teaching. Here is a thematic summary I typed up for students to strategize for their final exam review.
  Week 1: Introduction Week 2: Sampling, parametric models / R setup and practice Week 3: MoM estimation / bootstrap practice [slides] Week 4: Maximum likelihood estimation, CRLB [slides] Week 5: Sufficiency [slides] Week 6: Hypothesis testing, Neyman-Pearson lemma, duality of HT and CI [slides] [notes] Week 7: Comparing two samples: parametric Week 8: (Midterm review) [jeopardy slides] Week 9: Likelihood ratio test, UMP test, GLRT [slides] Week 10: (Spring break) Week 11: Comparing two samples: non-parametric, chi-square tests Week 12: ANOVA Week 13: Linear model (single predictor), least squares [notes] Week 14: Linear model (multiple predictors) Week 15: Bayesian statistics [slides]  </description>
     </item>
     
