@@ -47,7 +47,7 @@ Now for the actual post. I’ve been thinking about mathematics over Winter brea
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>I am a second-year PhD student in the Department of Statistics at the University of California at Berkeley. I am broadly interested in statistical modeling, statistical theory, and their applications to biology and the social sciences.
+      <description>I am a PhD student in the Department of Statistics at the University of California at Berkeley. I work in the labs of Yun Song and Nilah Ioannidis, where I build statistical models and methods to analyze genomic and single-cell chromatin data.
 I completed my undergraduate studies in Mathematical and Computational Science (with a Biology minor) at Stanford University, where I was advised by Bradley Efron. I was fortunate to do research in mathematical and computational biology with Noah Rosenberg, Marcus Feldman and Julia Palacios.</description>
     </item>
     
@@ -57,8 +57,8 @@ I completed my undergraduate studies in Mathematical and Computational Science (
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/research/</guid>
-      <description>Human Evolution &amp;ldquo;Raiding at Monte Alban.&amp;rdquo; Source: First Civilizations, PBS
-What do we know about our past? The study of human history is, and continues to be, transformed by the availability of genome data. The collection of new genomes along with their high-depth sequencing allow statistical models of evolution to be implemented at larger scales to reveal insights into how human populations migrated, admixed, or experienced population decline. Uncovering these evolutionary phenomena of our past enables us to learn more precisely about how we came to be, and the conclusions can be corrobarated with or even challenge incumbent theories about human societies.</description>
+      <description>I mainly develop approaches to (i) detect stratification in human populations and to (ii) utilize such stratification information to address downstream tasks like computing polygenic scores and fine-mapping. Here are the major themes of my research, with ongoing work (2021-present) emphasized with ❗.
+Exchangeability and Population Stratification (A) Performing PCA on genotypes that are drawn from a panmictic population. (B) Falsely detecting ancestrally informative SNPs when the samples were drawn from a panmictic population</description>
     </item>
     
     <item>
@@ -77,8 +77,8 @@ What do we know about our past? The study of human history is, and continues to 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/</guid>
-      <description> Teaching Philosophy I recently wrote a statement of teaching philosophy as part of a statistics teaching seminar, which you can read here. Look below for courses I have taught and feel free to click around for material.
-Past  Stat 135: Concepts of Statistics (Instructor: Adam Lucas) [material]  </description>
+      <description> Teaching Philosophy In 2019, I wrote a statement of teaching philosophy as part of a statistics teaching seminar, which you can read here. Look below for courses I have taught and feel free to click around for material.
+Past  Stat 153: Introduction to Time Series (Instructor: Jared Fisher) Stat 135: Concepts of Statistics (Instructor: Adam Lucas) [material]  </description>
     </item>
     
   </channel>
