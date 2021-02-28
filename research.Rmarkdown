@@ -6,7 +6,8 @@ I mainly develop approaches to (i) detect stratification in human populations an
 
 # Exchangeability and Population Stratification 
 
-![](/research_figures/msprime.jpg) _(A) Performing PCA on genotypes that are drawn from a panmictic population. (B) Falsely detecting ancestrally informative SNPs when the samples were drawn from a panmictic population_
+![](/research_figures/msprime.jpg) 
+_(A) Performing PCA on genotypes that are drawn from a panmictic population. (B) Falsely detecting ancestrally informative SNPs when the samples were drawn from a panmictic population_
 
 In biological data analysis, population stratification arises when the dataset contains samples from two or more populations with distinct underlying distributions of relevant features, thus causing associations found with a trait of interest to be due to sampling differences rather than true signals. Stratification occurs in single cell datasets, where unknown heterogeneity within a population of cells can mask important differential expression between distinct cell types or subtypes. Stratification also occurs in genome-wide association studies (GWAS), where differences in allele frequencies and linkage patterns between distinct populations can hinder portability of polygenic scores trained on one population to a distinct target population. Detecting population stratification is difficult because the datasets are high-dimensional, and it is not clear how to *represent* or to *summarize* the large number of features in a "correct" way that allows accurate and fast detection of heterogeneity.  
 
@@ -16,7 +17,8 @@ In biological data analysis, population stratification arises when the dataset c
 
 # Demographic Inference and Human Evolution 
 
-![](/research_figures/PBS-ur.jpg) _Marketplace in the ancient Mesopotamian city of Ur. Source: First Civilizations, PBS_
+![](/research_figures/PBS-ur.jpg) 
+_Marketplace in the ancient Mesopotamian city of Ur. Source: First Civilizations, PBS_
 
 What do we know about our past? The study of human history is, and continues to be, transformed by the availability of genome data. The collection of new genomes along with their high-depth sequencing allow statistical models of evolution to be implemented at larger scales to reveal insights into how human populations migrated, admixed, or experienced population decline. Uncovering these evolutionary phenomena of our past enables us to learn _more precisely_ about how we came to be, and the conclusions can be corrobarated with or even challenge incumbent theories about human societies. For example, studies on genetic differentiation between worldwide populations refuted the multiple origins hypothesis and gave credence to the theory that all human populations descended from ancestors who lived in contintental Africa. 
 
@@ -29,7 +31,8 @@ Zeng, T.C., Aw, A.J. and Feldman, M.W. (2018). "Cultural hitchhiking and competi
 
 # Population-Genetic Statistics
 
-![](/research_figures/thetaPiExpansion.jpg) _Bounds placed by proportion of singletons of the SFS on Tajima's pairwise nucleotide difference $\hat{\theta}_\pi$. Data was simulated using Hudson's ``ms``._
+![](/research_figures/thetaPiExpansion.jpg) 
+_Bounds placed by proportion of singletons of the SFS on Tajima's pairwise nucleotide difference $\hat{\theta}_\pi$. Data was simulated using Hudson's ``ms``._
 
 In the analysis of genetic data, summary statistics are often computed for biological interpretation. For example, single-nucleotide polymorphism (SNP) data is summarized into a sample frequency spectrum (SFS) for the inference of evolutionary history. Allele frequency statistics (like homozygosity $J$ and population differentiation $F_{ST}$) reflect levels of genetic homogeneity and admixture. Pairs of summary statistics sometimes share a close mathematical relationship, so that the value of one statistic constrains the value of the other. When summary statistics are integrated with evolutionary models in genetic studies, knowing these constraints helps enhance biological interpretation by providing insight into how sensitive the summary statistics are to parameters of the model being considered. I have investigated the dependence of the SFS on various sample features including the number of segregating sites, the proportion of singleton alleles, and the sample size. I have also shown that the theory of majorization is a useful mathematical technique for quantifying constraints between pairs of statistics measuring genetic homogeneity and diversity.
 
@@ -49,6 +52,7 @@ Aw, A.J. (2014). "The multicovering radius problem for some types of discrete st
 
 # Mathematical and Computational Phylogenetics
 
-![](/research_figures/coal-hist.jpg) _(Left) Gene tree lineages coalescing within a species tree. (Right) Rooted phylogeny with $2k+1$ labeled leaves and a lodgepole topology._
+![](/research_figures/coal-hist.jpg) 
+_(Left) Gene tree lineages coalescing within a species tree. (Right) Rooted phylogeny with $2k+1$ labeled leaves and a lodgepole topology._
 
 In phylogenetics, which studies the evolutionary relationships among biological entities (species, individuals or genes), stochastic models are the generative models based on which statistical analyses of biological data (species counts, molecular-genetic data, etc.) are performed. I have worked on multiple questions in this area, including enumeration of coalescent histories (which describe viable paths for the merging of gene lineages in a coalescent model on a species tree) and bounding the number of loci required for species tree splits to appear in a set of gene trees (which guarantees statistical consistency in phylogenetic inference algorithms like ASTRAL I and II). For the former, I have obtained enumerative results via an order-theoretic approach; for the latter I have lower bounds on the number of loci required.   
