@@ -52,6 +52,26 @@ I completed my undergraduate studies in Mathematical and Computational Science (
     </item>
     
     <item>
+      <title>Other Interests</title>
+      <link>/hobbies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hobbies/</guid>
+      <description>Science Communication 💬 Growing up, I struggled with communicating clearly. Experiencing the negative consequences of poor communication (ex: lack of confidence, poor grades in English class) motivated me to improve my communication skills.
+My educational voyage led me to stumble upon Asian Scientist (now part of Wildtype Media Group). There, I was incredibly fortunate to learn from and be mentored by amazing scientists and writers like Dr. Juliana Chan and Dr.</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>/research-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/research-copy/</guid>
+      <description>I mainly develop approaches to (i) detect stratification in human populations and to (ii) utilize such stratification information to address downstream tasks like computing polygenic scores and fine-mapping. I describe my main research themes below, and emphasize ongoing work (2021-present) with ❗.
+Exchangeability and Population Stratification (A) Performing PCA on genotypes that are drawn from a panmictic population. (B) Falsely detecting ancestrally informative SNPs when the samples were drawn from a panmictic population</description>
+    </item>
+    
+    <item>
       <title>Research</title>
       <link>/research/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
