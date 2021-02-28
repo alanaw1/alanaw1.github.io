@@ -1,0 +1,48 @@
+---
+title: Hobbies
+---
+
+# Science Communication `r knitr::asis_output("\U1F3B6")`
+
+Growing up a slow learner in a household that spoke broken English, I struggled with communicating clearly. Experiencing the negative consequences of poor communication (ex: lack of confidence, poor grades in English class) motivated me to improve my communication skills. 
+
+Together with my interest in mathematics and the winds of fortune, my educational voyage led me to stumble upon [Asian Scientist](https://asianscientist.com/) (now part of [Wildtype Media Group](https://www.wildtype.media/)). There, I was incredibly fortunate to learn from and be mentored by amazing scientists and writers like Dr. [Juliana Chan](https://wikitia.com/wiki/Juliana_M._Chan) and Dr. [Rebecca Tan](https://twitter.com/rebeccatanst?lang=en). I learned to think critically about how science can be impactful to society in many ways, to recognize the [positive](https://link.springer.com/book/10.1007/978-94-017-9097-0) [outcomes](https://www.tandfonline.com/doi/abs/10.1080/01292986.2016.1240819) that increased science communication brings about for society, and to encourage science communication in Asia, where it is [lacking](https://www.weforum.org/agenda/2015/03/why-asia-needs-good-science-writers/). 
+
+Above all else, I discovered I really *do enjoy* writing clearly about science!   
+
+While I have little time to write these days, I continue to integrate what I have learned into the way I share my scientific research. There's an inexplicable satisfaction when someone experiences the same "aha!" that you do after understanding a complex idea.    
+
+## Some Writings 
+
+For university undergraduates
+
+- "[The Turán number and probabilistic combinatorics](http://dx.doi.org/10.4169/amer.math.monthly.119.06.510)" (*The American Mathematical Monthly*)
+- "[From puppies to pendulums](http://web.stanford.edu/group/journal/cgi-bin/lynx/2016/11/06/from-puppies-to-pendulums/)" (*LYNX Magazine*) 
+
+For the public
+
+- "[The mathematics of messages](https://global.oup.com/academic/product/50-visions-of-mathematics-9780198701811)" (in *50 Visions of Mathematics*, published by Oxford University Press)
+- "[Computers, maths and minds](http://plus.maths.org/content/computers-maths-mind)" (*Plus Magazine*) 
+- "[Hello! Who are you?](https://www.dropbox.com/s/9qsy1japrze2o34/Hello!\%20Who\%20are\%20you.pdf)" (*Asian Scientist Magazine*, Volume 1)
+- "[From field to fork: sustaining food security in Asia](https://www.dropbox.com/s/z699a85iaa5jico/From\%20Field\%20to\%20Fork.pdf)" (*Asian Scientist Magazine*, Volume 1) 
+- "[InnovFest 2014: Translating Research into Products](http://www.asianscientist.com/2014/04/academia/innovfest-2014-translating-research-products-2014/)" (*Asian Scientist* news report)
+- "[Making Smart Technologies Work for Cities](http://www.asianscientist.com/2014/06/features/making-smart-technologies-cities-2014/)" (*Asian Scientist* news report)
+
+For corporate communications 
+
+- "Resource Allocation: Is There a Fair Way to Slice up the Pie?" (*Research @ SMU*)
+- "Keeping Data Under Lock and Key" (*Research @ SMU*)
+- "Text Mining: The Gold Rush of Big Data" (*Research @ SMU*)
+- "Keeping Data Safe from Prying Eyes" (*Research @ SMU*)
+
+# Cooking `r knitr::asis_output("\U1F35B")` 
+
+Graduate school can be struggling at times. Then COVID-19 happened. I am fortunate to have a roof to shelter under. To cope, I started documenting cooking experiments in the kitchen and exploring new recipes. Here are some of my favourite creations. 
+
+![](/hobbies_figures/cny_2021.jpg) _Three-course meal for Chinese New Year (February 2021)_
+
+![](/hobbies_figures/bagels_2021.jpg) _New York-style bagels, based on a recipe by Claire Saffitz (January 2021)_
+
+![](/hobbies_figures/chilicrab_2020.jpg) _Reimagining a Singaporean entrée. Chili crab sauce dip with toasted challah (July 2020)_
+
+A link to a cooking project is in the works!
