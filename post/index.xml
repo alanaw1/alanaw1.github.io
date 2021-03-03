@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Alan Aw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computing Euclidean Distances</title>
+      <link>/post/2021/03/01/computing-euclidean-distances/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/03/01/computing-euclidean-distances/</guid>
+      <description>In recent work involving resampling, I had to implement a fast procedure involving computing pairwise distances from a large matrix many times. This led me to the following investigation.
+Given an array \(\mathbf{X}\in\mathbb{R}^{n\times p}\), where the rows index \(n\) samples and columns index \(p\) features, how fast does it take to compute pairwise Euclidean distances for each pair of samples?
+To answer this question, we can performing a timing analysis with the help of the microbenchmark package.</description>
+    </item>
     
     <item>
       <title>Review of “Who We Are and How We Got Here&#34;</title>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computing Euclidean Distances | Alan Aw</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/research/">Research</a></li>
+      
+      <li><a href="/teaching/">Teaching</a></li>
+      
+      <li><a href="/hobbies/">Other Interests</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Computing Euclidean Distances</span></h1>
+
+<h2 class="date">2021/03/01</h2>
+</div>
+
+<main>
+
+
+
+<p>In recent work involving resampling, I had to implement a fast procedure involving computing pairwise distances from a large matrix many times. This led me to the following investigation.</p>
+<p>Given an array <span class="math inline">\(\mathbf{X}\in\mathbb{R}^{n\times p}\)</span>, where the rows index <span class="math inline">\(n\)</span> samples and columns index <span class="math inline">\(p\)</span> features, how fast does it take to compute pairwise Euclidean distances for each pair of samples?</p>
+<p>To answer this question, we can performing a timing analysis with the help of the <code>microbenchmark</code> package.</p>
+<pre class="r"><code>require(microbenchmark)
+## Loading required package: microbenchmark</code></pre>
+<div id="method-1-base-rs-dist-method" class="section level1">
+<h1>Method 1: Base R's <code>dist</code> Method</h1>
+<p>The code below computes the Euclidean distance vector of a <span class="math inline">\(100\times 200\)</span> real random matrix, a total of <span class="math inline">\(100\)</span> times. It reports summary statistics of computation times.</p>
+<pre class="r"><code>## Naïve implementation using dist method
+# Generate a random matrix
+X &lt;- matrix(rnorm(20000), ncol = 200, nrow = 100)
+
+# Compute Euclidean distance
+microbenchmark(dist.mat &lt;- dist(X))
+## Unit: milliseconds
+##                 expr      min       lq     mean   median       uq      max
+##  dist.mat &lt;- dist(X) 1.759067 1.887408 2.405261 2.215285 2.485445 13.95147
+##  neval
+##    100</code></pre>
+<p>It takes <span class="math inline">\(\approx 1.7\times 10^{-3}\)</span> to <span class="math inline">\(2\times 10^{-3}\)</span> seconds on average. Is this fast enough? Let's test it on a high-dimensional matrix.</p>
+<pre class="r"><code>## Naïve implementation using dist method
+# Generate a high-dimensional random matrix
+X &lt;- matrix(rnorm(2e6), ncol = 2e3, nrow = 1e3)
+
+# Compute Euclidean distance
+microbenchmark(dist.mat &lt;- dist(X), times = 10)
+## Unit: seconds
+##                 expr      min       lq     mean   median       uq      max
+##  dist.mat &lt;- dist(X) 6.082708 6.093422 6.207107 6.110489 6.191934 6.874078
+##  neval
+##     10</code></pre>
+<p>Clearly, it's taking the order of <span class="math inline">\(\approx 6.2\)</span> to <span class="math inline">\(6.5\)</span> seconds per Euclidean distance computation. If we want to compute the Euclidean distance <em>many times</em> (ex: when performing resampling for uncertainty quantification, this would be performed on order of <span class="math inline">\(1000\)</span> times), this speed poses a problem.</p>
+</div>
+<div id="method-2-the-dist-method-from-rfast" class="section level1">
+<h1>Method 2: The <code>Dist</code> Method from <code>Rfast</code></h1>
+<p>The package <code>Rfast</code> (<a href="https://github.com/RfastOfficial/Rfast">Github repo</a>) provides an efficient way to perform such a task. Let us see if this is true. First, we compare the performance on the smaller matrix.</p>
+<pre class="r"><code>## Implementation using Dist method
+require(Rfast)
+## Loading required package: Rfast
+## Warning: package &#39;Rfast&#39; was built under R version 3.6.2
+## Loading required package: Rcpp
+## Warning: package &#39;Rcpp&#39; was built under R version 3.6.2
+## Loading required package: RcppZiggurat
+## Warning: package &#39;RcppZiggurat&#39; was built under R version 3.6.2
+
+# Generate a random matrix
+X &lt;- matrix(rnorm(20000), ncol = 200, nrow = 100)
+
+# Compute Euclidean distance
+microbenchmark(dist.mat &lt;- Dist(X, vector = TRUE))
+## Unit: microseconds
+##                                expr     min       lq     mean  median      uq
+##  dist.mat &lt;- Dist(X, vector = TRUE) 615.263 639.9855 653.5883 648.586 658.291
+##      max neval
+##  788.089   100</code></pre>
+<p>It takes <span class="math inline">\(\approx 7\times 10^{-4}\)</span> to <span class="math inline">\(\approx 9\times 10^{-4}\)</span> seconds. This is already faster than <code>dist</code> in base R. Now we check the performance on the high-dimensional matrix.</p>
+<pre class="r"><code>## Implementation using Dist method
+# Generate a high-dimensional random matrix
+X &lt;- matrix(rnorm(2e6), ncol = 2e3, nrow = 1e3)
+
+# Compute Euclidean distance
+microbenchmark(dist.mat &lt;- Dist(X, vector = TRUE), times = 10)
+## Unit: milliseconds
+##                                expr      min       lq    mean   median       uq
+##  dist.mat &lt;- Dist(X, vector = TRUE) 643.5596 650.0533 673.785 662.0556 667.5859
+##       max neval
+##  748.9944    10</code></pre>
+<p>It takes <span class="math inline">\(0.65\)</span> to <span class="math inline">\(0.8\)</span> seconds. OK, it seems to be doing <em>significantly</em> better; this is close to an order of magnitude faster!</p>
+<div id="why-does-it-work" class="section level2">
+<h2>Why does it work?</h2>
+<p>The question can be answered by entering <code>Dist</code> into R console. This returns the body of the function:</p>
+<pre><code>function (xnew, x, type = &quot;euclidean&quot;, k = 0, index = FALSE, 
+    trans = TRUE, square = FALSE) 
+{
+    if (k &gt; 0) {
+        if (index) {
+            x &lt;- .Call(Rfast_dista_index, t(xnew), t(x), k, type)
+        }
+        else {
+            x &lt;- .Call(Rfast_dista_values, t(xnew), t(x), k, 
+                square, type)
+        }
+    }
+    else {
+        x &lt;- .Call(Rfast_dista, t(xnew), t(x), square, type)
+    }
+    if (trans) 
+        x &lt;- t(x)
+    x
+}
+&lt;bytecode: 0x11f419578&gt;
+&lt;environment: namespace:Rfast&gt;</code></pre>
+<p>So, <code>Dist</code> works by calling an internal function <code>Rfast_list_vec</code>. We next hunt for this internal function on the Github repo. This takes us to the back-end C++ script <a href="https://github.com/RfastOfficial/Rfast/blob/82f3b567815e13250d9321e96ac59d0ea3eef0e7/src/dists_vec.cpp">here</a>, showing that <code>Rfast_list_vec</code> performs the pairwise Euclidean distance computation using C++ operations. It is known that for loops are significantly faster in C++ than in higher-level languages like Python and R, so this is no surprise.</p>
+<p>In general, one can interface R code with C++ back-end code for speeding things up. (As it turns out, I am doing this for <a href="https://en.wikipedia.org/wiki/Hamming_distance">Hamming distances</a>, since <code>Dist</code> does not incorporate the Hamming distance as one of its options.)</p>
+</div>
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; Alan Aw 2020 &ndash; 2021 | <a href="https://github.com/alanaw1">Github</a> | <a href="https://twitter.com/youngtableaux">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+
