@@ -6,10 +6,20 @@
     <description>Recent content in Genetics on Alan Aw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/genetics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cleaning and Visualizing 1000 Genomes Data</title>
+      <link>/post/2021/03/03/visualizing-1000-genomes-data/</link>
+      <pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/03/03/visualizing-1000-genomes-data/</guid>
+      <description>In 2008, scientists launched the 1000 Genomes Project to catalogue human genetic variation across the globe. This \(N=2504\) by \(P=84.4 \times 10^6\) dataset (in Phase 3) has spurred the development of models and algorithms to relate our genome to many downstream measurements (like gene expression, transcriptome, epigenome, proteome and phenotypes), as well as to upstream biological processes like human population demography and history.
+If there is one thing that hinders my progress at analyzing real biological datasets, it is bioinformatics.</description>
+    </item>
     
     <item>
       <title>Review of “Who We Are and How We Got Here&#34;</title>

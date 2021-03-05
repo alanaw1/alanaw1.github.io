@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cleaning and Visualizing 1000 Genomes Data | Alan Aw</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/research/">Research</a></li>
+      
+      <li><a href="/teaching/">Teaching</a></li>
+      
+      <li><a href="/hobbies/">Other Interests</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Cleaning and Visualizing 1000 Genomes Data</span></h1>
+
+<h2 class="date">2021/03/03</h2>
+</div>
+
+<main>
+
+
+
+<p>In 2008, scientists launched the <a href="https://www.internationalgenome.org/">1000 Genomes Project</a> to catalogue human genetic variation across the globe. This <span class="math inline">\(N=2504\)</span> by <span class="math inline">\(P=84.4 \times 10^6\)</span> dataset (in <a href="https://www.internationalgenome.org/data/">Phase 3</a>) has spurred the development of models and algorithms to relate our genome to many <em>downstream</em> measurements (like gene expression, transcriptome, epigenome, proteome and phenotypes), as well as to <em>upstream</em> biological processes like human population demography and history.</p>
+<p>If there is one thing that hinders my progress at analyzing real biological datasets, it is bioinformatics. Bioinformatics can be such a pain! (I'll probably write more bioinformatics posts and --- if I am allowed --- share the associated data, just so that no one has to go through the same pain as I do. Seriously.)</p>
+<div id="cleaning-step-by-step" class="section level1">
+<h1>Cleaning, Step by Step</h1>
+<p>There are many ways to clean the 1000 Genomes (1000G) data, depending on what you want to include or exclude. Here, I record down some specific steps taken for purposes of constructing polygenic scores and performing fine-mapping. Note that we use Phase 3 data here. (To learn more about what's different about Phase 3, read <a href="https://www.nature.com/articles/nature15393">this paper</a>.)</p>
+<p>Before we begin, a few things we need.</p>
+<ul>
+<li>Install PLINK (2.0 preferably). You can do so <a href="https://www.cog-genomics.org/plink/2.0/">here</a>. To operate PLINK, place it in the same directory as the dataset files.</li>
+<li>Download 1000G Phase 3 data <a href="https://www.cog-genomics.org/plink/2.0/resources">here</a>. (You need <span class="math inline">\(\approx 4\)</span>GB of space.) Specifically, these files:
+<ul>
+<li><code>all_phase3.pgen.zst</code> (<span class="math inline">\(N\times P\)</span> genotype data; very large)</li>
+<li><code>all_phase3.pvar.zst</code> (variant information; contains base-pair coordinate, rsID, filter, etc.)</li>
+<li><code>phase3_corrected.psam</code> (pedigree-corrected sample information; contains individual ID, population, super-population, etc.)</li>
+</ul></li>
+</ul>
+<p>(You can read more about the files <a href="https://www.cog-genomics.org/plink/2.0/formats#pgen">here</a>.)</p>
+<p>HUGE thanks to Florian Privé for his R package <code>bigsnpr</code>, which allows us to perform the cleaning steps directly on R (or using RStudio)! In fact, I will be listing the steps based on reading <a href="https://rdrr.io/github/privefl/mypack/src/data-raw/1000G-phase3-common-norel.R">this script</a>. Thanks to Florian again for providing the post-QC output, we don't need to run these steps. Nevertheless, it's important to know how we are processing our data.</p>
+<ol style="list-style-type: decimal">
+<li>Filter to keep only variants that are in HapMap3 and UK Biobank.
+<ul>
+<li>First, extract <a href="ftp://ftp.ncbi.nlm.nih.gov/hapmap/genotypes/hapmap3/plink_format/draft_2">HapMap3</a> and <a href="https://biobank.ctsu.ox.ac.uk/crystal/refer.cgi?id=531">UK Biobank</a> variants.<br />
+</li>
+<li>Combine variants into a text file for PLINK2 to read.</li>
+<li>Run the command <code>./plink2 --make-bed --pfile data/all_phase3 --max-alleles 2 --autosome --memory 8000 --extract hapmap-3-ukb-rsid.txt --out 1000G_phase3_common</code> in the working directory.</li>
+</ul>
+<p>Note: <code>hapmap-3-ukb-rsid.txt</code> is the text file from the previous point, <code>--max-alleles 2</code> means we include only bi-allelic SNPs, <code>autosome</code> means we exclude all unplaced and non-autosomal variants, <code>--make-bed</code> means we want the output files to have the &quot;bed, bim, fam&quot; trio of extensions (as opposed to &quot;pgen, pvar, psam&quot;), and <code>--memory 8000</code> means we allocate 8000Mb of memory for our main workspace. Finally, <code>--out 1000G_phase3_common</code> spits out the output.</p></li>
+<li>Remove related individuals.
+<ul>
+<li>This is accomplished by running the robust relationship inference algorithm <a href="https://academic.oup.com/bioinformatics/article/26/22/2867/228512">KING</a>. The <a href="https://rdrr.io/github/privefl/mypack/man/snp_plinkKINGQC.html">threshold</a> for removal is set to include up to second-degree relations (i.e., kinship coefficient of <span class="math inline">\(0.0884\)</span>).</li>
+</ul></li>
+<li>Pull additional information about individuals.
+<ul>
+<li>This adds population descriptions to each sample ID (ex: Kinh in Ho Chi Minh City). This was removed in Step 1, but <code>phase3_corrected.psam</code> contains this information.</li>
+</ul></li>
+</ol>
+<p>After performing the QC above, we should have (1) a <span class="math inline">\(N\times P\)</span> genotype dataset (<code>.bed</code>), with (2) variant information (<code>.bim</code>) and (3) additional information about the individuals (<code>.fam</code>). As mentioned earlier, Florian provides these data in a zipped file (<code>1000G_phase3_common_norel.zip</code>), which we can download and analyze by executing the function <code>download_1000G</code> (see <a href="https://www.rdocumentation.org/packages/bigsnpr/versions/1.4.4/topics/download_1000G">here</a>).</p>
+</div>
+<div id="visualizing-and-summarizing" class="section level1">
+<h1>Visualizing and Summarizing</h1>
+<p>Let us explore the cleaned 1000G data. This is for research purposes but perhaps the reader might be intrigued. Feel free to read along and leave comments if you have any.</p>
+<p>We start by loading the dataset, with help from the <code>snpStats</code> library.</p>
+<div id="example-of-painful-bioinformatics" class="section level2">
+<h2>Example of Painful Bioinformatics</h2>
+<p>(This section can be skipped. I am leaving it here only to make a point about choosing the right strategy for data analysis.)</p>
+<p>As described previously, Florian's dataset includes three files. We try loading the files using the lines of code below.</p>
+<pre><code>## Load the dataset
+# Load library for read.plink
+library(snpStats)
+
+# Set relative directory to where files are
+rel_dir &lt;- &#39;~/Documents/research/pgs/030121/tmp-data-old/&#39;
+samples &lt;- read.plink(bed = paste0(rel_dir, &quot;1000G_phase3_common_norel.bed&quot;),
+                      bim = paste0(rel_dir, &quot;1000G_phase3_common_norel.bim&quot;), 
+                      fam = paste0(rel_dir, &quot;1000G_phase3_common_norel.fam&quot;))</code></pre>
+<p>We get the following error. Blistering barnacles!</p>
+<pre><code>non-unique value when setting &#39;row.names&#39;: ‘rs4001921’Error in `.rowNamesDF&lt;-`(x, value = value) : 
+  duplicate &#39;row.names&#39; are not allowed</code></pre>
+<p>This error suggests that there are multiple variants sharing the same rsID. If we open the <code>.bim</code> file to check, we'll see that this is indeed the case.</p>
+<pre><code>## From .bim file
+19  rs10422346  0   41362173    T   C
+19  rs4001921   0   41363301    A   C &lt;-- DUPLICATE!
+19  rs4001921   0   41363301    T   C &lt;-- DUPLICATE!
+19  rs8102683   0   41363765    C   T</code></pre>
+<p>Thus, we have to remove any such duplicates if we want to proceed. We do so using PLINK2: <code>./plink2 --make-bed --bfile 1000G_phase3_common_norel --out 1000G_phase3_common_norel_rmdup --rm-dup exclude-all</code>. Now we try to load it again.</p>
+<pre><code>## Load the dataset
+# Load library for read.plink
+library(snpStats)
+
+# Set relative directory to where files are
+rel_dir &lt;- &#39;~/Documents/research/pgs/030121/tmp-data-old/&#39;
+samples &lt;- read.plink(bed = paste0(rel_dir, &quot;1000G_phase3_common_norel_rmdup.bed&quot;),
+                      bim = paste0(rel_dir, &quot;1000G_phase3_common_norel_rmdup.bim&quot;), 
+                      fam = paste0(rel_dir, &quot;1000G_phase3_common_norel_rmdup.fam&quot;))</code></pre>
+<p>Guess what? Another error pops up!</p>
+<pre><code>Error in read.plink(bed = paste0(rel_dir, &quot;1000G_phase3_common_norel.bed&quot;),  : 
+  Couln&#39;t open input file: ~/Documents/research/pgs/030121/tmp-data-old/1000G_phase3_common_norel.bed</code></pre>
+<p>After testing on some smaller simulated datasets, I am convinced that this has to do with the 1000G file size being too large for loading in memory. This suggests we have to go through other routes.</p>
+<p><strong>Option 1: Convert to VCF and continue.</strong> To do that, we run <code>./plink2 --bfile 1000G_phase3_common_norel_rmdup --recode vcf bgz --out 1000G_phase3_common_norel_rmdup</code>. There is a package called <code>vcfR</code> that allows reading of VCF files. Let us see if we can proceed down this path.</p>
+<pre><code>## Load the dataset
+# Load library for read.vcfR
+library(vcfR)
+
+# Set relative directory to where files are
+rel_dir &lt;- &#39;~/Documents/research/pgs/030121/tmp-data-old/&#39;
+vcf &lt;- read.vcfR(paste0(rel_dir, &quot;1000G_phase3_common_norel_rmdup.vcf.gz&quot;))</code></pre>
+<p>Alas, the error proves the point.</p>
+<pre><code>Error: vector memory exhausted (limit reached?)</code></pre>
+<p>Clearly this strategy didn't work, so we abandon it.</p>
+<p><strong>Option 2: Use another data analysis programming language / platform with more compute.</strong> This could work, but we are not going to pursue it.</p>
+<p><strong>Option 3: Allocate tasks judiciously.</strong> This is a creative interpretation of Option 2. This means we have to decide what tasks we want to accomplish beforehand, and then see if we can perform intermediate processes externally in a way that avoids directly loading the huge dataset into R's memory. Once again thanks to Florian and to PLINK2, for exploratory data analysis we have some functions ready for use.</p>
+</div>
+<div id="plotting-allele-frequencies" class="section level2">
+<h2>Plotting allele frequencies</h2>
+<p>PLINK2 computes allele frequencies for each variant via the following command: <code>./plink2 --bfile 1000G_phase3_common_norel_rmdup --freq</code>. Thus, we can load the output file of the command rather than the original dataset.</p>
+<pre class="r"><code>## Load 1000G data for summary
+# Load some libraries
+library(tidyverse)
+
+# Set relative directory
+rel_dir &lt;- &#39;~/Documents/research/pgs/030121/tmp-data-old/&#39;
+freq_file &lt;- paste0(rel_dir, &quot;plink2.afreq&quot;)
+p &lt;- data.table::fread(freq_file)
+colnames(p) &lt;- c(&quot;CHROM&quot;,&quot;ID&quot;,&quot;REF&quot;,&quot;ALT&quot;, &quot;ALT_FREQS&quot;,&quot;COUNT&quot;)
+p &lt;- p[,c(&quot;CHROM&quot;,&quot;ID&quot;, &quot;ALT_FREQS&quot;)]
+head(p)</code></pre>
+<pre><code>##    CHROM         ID ALT_FREQS
+## 1:     1  rs2185539 0.0345520
+## 2:     1  rs3131972 0.6546810
+## 3:     1 rs12184325 0.0269184
+## 4:     1  rs3131969 0.6795900
+## 5:     1  rs3131967 0.6854160
+## 6:     1  rs3131962 0.7494980</code></pre>
+<pre class="r"><code># 1. How many variants are there per chromosome? 
+knitr::kable(table(p$CHROM))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Var1</th>
+<th align="right">Freq</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">137124</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">138857</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">115986</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="right">105309</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="right">102912</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="right">109365</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="right">91304</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="right">90017</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="right">76380</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="right">87978</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="right">84532</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="right">79777</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="right">61865</td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="right">54863</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="right">51221</td>
+</tr>
+<tr class="even">
+<td align="left">16</td>
+<td align="right">54582</td>
+</tr>
+<tr class="odd">
+<td align="left">17</td>
+<td align="right">46991</td>
+</tr>
+<tr class="even">
+<td align="left">18</td>
+<td align="right">50090</td>
+</tr>
+<tr class="odd">
+<td align="left">19</td>
+<td align="right">33863</td>
+</tr>
+<tr class="even">
+<td align="left">20</td>
+<td align="right">43350</td>
+</tr>
+<tr class="odd">
+<td align="left">21</td>
+<td align="right">23860</td>
+</tr>
+<tr class="even">
+<td align="left">22</td>
+<td align="right">24624</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># 2. What is the distribution of allele frequencies in each chromosome?
+ggplot(p, aes(x = ALT_FREQS)) +
+  geom_histogram(aes(fill = as.factor(CHROM))) +
+  facet_wrap(~CHROM) +
+  theme_bw() +
+  theme(legend.position = &quot;none&quot;) + 
+  ggtitle(&quot;Sample Frequency Spectra (SFS)&quot;)</code></pre>
+<p><img src="/post/cleaning-1000-genomes-data_files/figure-html/plot_allele_freq-1.png" width="672" /></p>
+<p>The plot above shows the empirical sample frequency spectrum of variants across all the chromosomes. It looks a little off; typical SFSes have rare variants occurring at highest counts. (There should be no kink at the left ends.)</p>
+<p>There is an explanation: as described by Florian in his paper on which his analysis is based, in Step 1 of Cleaning above, variants with MAF <span class="math inline">\(&lt;0.01\)</span> or HWE <span class="math inline">\(p\)</span>-value less than <span class="math inline">\(10^{-50}\)</span> are removed. This is evidenced by the body of the function <code>snp_plinkQC</code>, which you can see <a href="https://rdrr.io/github/privefl/mypack/src/R/external-software.R">here</a>.</p>
+<p>While it doesn't matter for purposes of illustration, for actual data analysis we might consider modifying the data processing script slightly. This of course depends on the downstream task. (Ex: would we want to keep rare variants to illustrate a point?)</p>
+</div>
+<div id="clustering" class="section level2">
+<h2>Clustering</h2>
+<p>Florian's <code>bigsnpr</code> package allows one to perform clustering by performing SVD on the matrix. We list these steps in turn.</p>
+<ol style="list-style-type: decimal">
+<li>Subset the samples to remove closely related individuals
+<ul>
+<li>This reduces the sample size from <span class="math inline">\(2490\)</span> to <span class="math inline">\(559\)</span></li>
+</ul></li>
+</ol>
+<pre><code>ind.norel &lt;- runonce::save_run({
+  rel &lt;- snp_plinkKINGQC(
+    plink2.path = plink2,
+    bedfile.in = bedfile,
+    thr.king = 2^-4.5,
+    make.bed = FALSE,
+    ncores = NCORES,
+    extra.options = &quot;--memory 5000&quot;
+  )
+  str(rel)
+  which(!obj.bed$fam$sample.ID %in% rel$IID2)
+}, file = &quot;tmp-data/ind-norel-1000G.rds&quot;)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Perform SVD</li>
+</ol>
+<pre><code>## Not run here
+# Load bigsnpr
+library(bigsnpr)
+
+# Perform SVD
+obj.svd &lt;- runonce::save_run(
+  bed_autoSVD(obj.bed, ind.row = ind.norel, k = 25, ncores = NCORES),
+  file = &quot;tmp-data/SVD-1000G.rds&quot;
+)</code></pre>
+<p>The SVD function, <code>bed_autoSVD</code>, performs automated variant pruning and removal of long-range LD (correlated) variants. This means that the initial number of variants is reduced significantly, which we know is necessary for PCA to correctly detect population stratification.</p>
+<p>The resulting left and right eigenvectors are the projections onto the principal components, which we can use to visualize clusters.</p>
+<pre class="r"><code>## Clustering
+# Load required libraries
+require(bigsnpr)
+
+# Load the SVD and extract principal components 
+obj.svd &lt;- readRDS(&quot;~/Documents/research/pgs/021721/tmp-data/SVD-1000G.rds&quot;)
+PC &lt;- stats::predict(obj.svd)
+colnames(PC) &lt;- paste0(&#39;PC&#39;, 1:25) 
+
+# Obtain the sample IDs and their population labels
+ind.norel &lt;- readRDS(&quot;~/Documents/research/pgs/021721/tmp-data/ind_norel.rds&quot;)
+fam2 &lt;- bigreadr::fread2(sub_bed(&quot;~/Documents/research/pgs/021721/tmp-data/1000G_phase3_common_norel.bed&quot;, &quot;.fam2&quot;))[ind.norel, ]
+
+# Generate the plot  
+pca_data &lt;- cbind(PC, fam2) %&gt;% as.data.frame()
+ggplot(pca_data, aes(PC1,PC2,color=`Super Population`))+
+  geom_point(alpha=0.5, size=1) +
+  theme_bw() +
+  theme(
+        axis.text=element_text(size=10),
+        panel.grid = element_blank(),
+        plot.margin = unit(rep(0.5,4), &quot;pt&quot;),
+        plot.background = element_blank()) +
+  coord_fixed(ratio=1.4) </code></pre>
+<p><img src="/post/cleaning-1000-genomes-data_files/figure-html/pca-1.png" width="672" /></p>
+<p>From the plot above, you can see that PCA on a variant-pruned version of the genotype matrix clusters individuals well by super populations.</p>
+</div>
+<div id="within-population-summary" class="section level2">
+<h2>Within-population summary</h2>
+<p>(To be added.)</p>
+</div>
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; Alan Aw 2020 &ndash; 2021 | <a href="https://github.com/alanaw1">Github</a> | <a href="https://twitter.com/youngtableaux">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+
