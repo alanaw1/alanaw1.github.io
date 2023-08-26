@@ -4,19 +4,16 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am a Postdoctoral Researcher with [Iain Mathieson](https://www.med.upenn.edu/mathieson-lab/) at the Department of Genetics. I recently completed my PhD in [Statistics](https://statistics.berkeley.edu/) at UC Berkeley, where I worked with Yun Song and Nilah Ioannidis. I did my undergraduate degree in [Mathematical and Computational Science](https://mcs.stanford.edu/) (with Honors in Mathematical Biology) at Stanford.     
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Human Statistical Genomics:** population stratification detection, polygenic score transferability, genetic fine-mapping, variant effect predictor operationalization     
+- **Computational Biology:** differential expression analysis, models of evolution    
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Aug. 2023]** New website is up!
 
 {% include_relative _includes/publications.md %}
 
