@@ -11,8 +11,8 @@ I am a Postdoctoral Researcher with [Iain Mathieson](https://www.med.upenn.edu/m
 - **Human Statistical Genomics:** population stratification detection, polygenic score transferability, genetic fine-mapping, variant effect predictor operationalization     
 - **Computational Biology:** differential expression analysis, models of evolution    
 
-[List of Papers](./research.html).
+[List of Papers](./research.md).
 
 ## News
 
-- **[Aug. 2023]** New website is up!s
+- **[Aug. 2023]** New website is up!
