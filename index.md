@@ -16,3 +16,5 @@ I am a Postdoctoral Researcher with [Iain Mathieson](https://www.med.upenn.edu/m
 ## News
 
 - **[Aug. 2023]** New website is up!
+
+{% include_relative _includes/publications.md %}
