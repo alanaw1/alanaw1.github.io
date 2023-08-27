@@ -1,22 +1,21 @@
 main:
 
-  - title: Paper 1
-    authors: Author 1, Author 2
-    conference_short: Conference Short
-    conference: Conference Long
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+  - title: A simple and flexible test of sample exchangeability with applications to statistical genomics
+    authors: Alan J. Aw, Jeffrey P. Spence, Yun S. Song
+    conference_short: Ann. Appl. Stat
+    conference: The Annals of Applied Statistics
+    pdf: https://arxiv.org/abs/2109.15261
+    code: https://github.com/songlab-cal/flinty 
+    page: https://alanaw1.github.io/flintyR 
+    notes: To Appear 
+    image: ./assets/img/AoAS_2023_simple.jpeg
 
-  - title: Paper 2
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+  - title: The impact of stability considerations on genetic fine-mapping
+    authors: Alan J. Aw, Lionel C. Jin, Nilah M. Ioannidis, Yun S. Song
+    conference_short: eLife 
+    conference: eLife
+    pdf: https://elifesciences.org/reviewed-preprints/88039v1
+    code: https://github.com/songlab-cal/StableFM
+    page: https://alan-aw.shinyapps.io/stability_v0/ 
+    notes: Reviewed Preprint (revisions forthcoming) 
+    image: ./assets/img/eLife_2023_impact.jpeg
