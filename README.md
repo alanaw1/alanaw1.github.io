@@ -1,4 +1,6 @@
-# The Minimal Light Theme
+# Alan's Website (Forked from The Minimal Light Theme)
+
+Note: README from original theme preserved below.
 
 [![LICENSE](https://img.shields.io/github/license/yaoyao-liu/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE)
 
