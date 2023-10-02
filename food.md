@@ -6,6 +6,10 @@ Welcome to my food jotter. Inspired by [home](https://www.visitsingapore.com/din
 
 ## Baking
 
+![](./assets/img/kormos_2023.jpg) 
+
+Lactose-free kormos/doukissa (09/2023)
+
 ![](./assets/img/lingonberry_2022.jpg) 
 
 Gluten-free sugar cookies with lingonberry and cloudberry toppings (05/2022)
