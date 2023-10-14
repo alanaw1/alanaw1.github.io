@@ -12,6 +12,10 @@ layout: homepage
 2. A.J. Aw (2014). The multicovering radius problem for some types of discrete structures. *Designs, Codes and Cryptography* **72** (2): 195-209. DOI: [10.1007/s10623-012-9755-6](https://doi.org/10.1007/s10623-012-9755-6)
 1. A.J. Aw (2012). The Turán number and probabilistic combinatorics. *The American Mathematical Monthly* **119** (6): 510-513. DOI: [10.4169/amer.math.monthly.119.06.510](https://doi.org/10.4169/amer.math.monthly.119.06.510)
 
+### Preprints / Under Review
+
+1. G. Benegas, C. Albors, A.J. Aw, C. Ye, Y.S. Song (2023). GPN-MSA: an alignment-based DNA language model for genome-wide variant effect prediction. *bioRXiv preprint*. DOI: [10.1101/2023.10.10.561776](https://doi.org/10.1101/2023.10.10.561776) ([Code and Data](https://github.com/songlab-cal/gpn#gpn-msa))
+
 ### In Preparation
 
 2. A.J. Aw, J.F. McRae, E. Rahmani & Y.S. Song (2023+). Population stratification explains low sensitivities of overly parameterized polygenic risk scores. 

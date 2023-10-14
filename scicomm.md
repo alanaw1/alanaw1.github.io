@@ -8,7 +8,7 @@ I used to devote time to professional, non-academic science communication. I int
 
 My experience helped me think critically about how science impacts society beyond the ivory tower of academia: to recognize the [positive](https://link.springer.com/book/10.1007/978-94-017-9097-0) [outcomes](https://www.tandfonline.com/doi/abs/10.1080/01292986.2016.1240819) that increased science communication brings about for society, and to encourage science communication in Asia, where it is historically [lacking](https://www.weforum.org/agenda/2015/03/why-asia-needs-good-science-writers/). 
 
-Presently, the science communication landscape has evolved tremendously, with podcasts and TikTok rising in popularity. There are also new challeges, including ensuring communication of trustworthy information in the age of AI-powered chatbots (e.g., ChatGPT) and combatting misinformation and distrust in science. I hope to engage these issues more seriously in the future.
+Presently, the science communication landscape has evolved tremendously, with podcasts and TikTok rising in popularity. There are also new challenges, including ensuring communication of trustworthy information in the age of AI-powered chatbots (e.g., ChatGPT) and combatting misinformation and distrust in science. I hope to engage these issues more seriously when opportunities arise.
 
 **Writings for university students**
 
