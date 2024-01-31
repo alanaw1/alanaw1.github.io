@@ -14,12 +14,12 @@ layout: homepage
 
 ### Preprints / Under Review
 
-1. G. Benegas, C. Albors, A.J. Aw, C. Ye, Y.S. Song (2023). GPN-MSA: an alignment-based DNA language model for genome-wide variant effect prediction. *bioRXiv preprint*. DOI: [10.1101/2023.10.10.561776](https://doi.org/10.1101/2023.10.10.561776) ([Code and Data](https://github.com/songlab-cal/gpn#gpn-msa))
+2. A.J. Aw, J.F. McRae, E. Rahmani & Y.S. Song (2024+). Highly parameterized polygenic scores tend to overfit to population stratification via random effects. *bioRXiv preprint*. DOI: [10.1101/2024.01.27.577589](https://doi.org/10.1101/2024.01.27.577589) ([Code and Data](https://github.com/songlab-cal/StratPGS), [Dashboard](https://alan-aw.shinyapps.io/stratPGS_v0/))
+1. G. Benegas, C. Albors, A.J. Aw, C. Ye, Y.S. Song (2023+). GPN-MSA: an alignment-based DNA language model for genome-wide variant effect prediction. *bioRXiv preprint*. DOI: [10.1101/2023.10.10.561776](https://doi.org/10.1101/2023.10.10.561776) ([Code and Data](https://github.com/songlab-cal/gpn#gpn-msa))
 
 ### In Preparation
 
-2. A.J. Aw, J.F. McRae, E. Rahmani & Y.S. Song (2023+). Population stratification explains low sensitivities of overly parameterized polygenic risk scores. 
-1. J.V. Moreno-Mayar, A.J. Aw, ..., Y. Deng, G. Kroonen, P. Grebenyuk, D. Meltzer, Y.S. Song, E. Willerslev (2023+). Historical ancient genomics shed light on the origins of present-day Siberians and their languages.
+1. J.V. Moreno-Mayar, A.J. Aw, ..., Y. Deng, G. Kroonen, P. Grebenyuk, D. Meltzer, Y.S. Song, E. Willerslev (2024+). Historical ancient genomics shed light on the origins of present-day Siberians and their languages.
 
 
 [back](./)
