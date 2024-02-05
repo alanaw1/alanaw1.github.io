@@ -4,10 +4,10 @@ main:
     authors: Alan J. Aw, Jeffrey P. Spence, Yun S. Song
     conference_short: Ann. Appl. Stat
     conference: The Annals of Applied Statistics
-    pdf: https://arxiv.org/abs/2109.15261
+    pdf: https://doi.org/10.1214/23-AOAS1817
     code: https://github.com/songlab-cal/flinty 
     page: https://alanaw1.github.io/flintyR 
-    notes: To Appear 
+    notes: Volume 18, pp. 858-881
     image: ./assets/img/AoAS_2023_simple.jpeg
 
   - title: The impact of stability considerations on genetic fine-mapping
