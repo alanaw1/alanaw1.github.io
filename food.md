@@ -28,7 +28,7 @@ New York-style bagels, based on a recipe by Claire Saffitz (01/2021)
 
 ## Cooking
 
-![](./assets/img/chilicrab_2022.jpg) 
+![](./assets/img/scampi_2024.jpg) 
 
 Shrimp scampi orzo with broccoli roast (02/2024)
 
