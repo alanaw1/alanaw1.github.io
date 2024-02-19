@@ -6,6 +6,10 @@ Welcome to my food jotter. Inspired by [home](https://www.visitsingapore.com/din
 
 ## Baking
 
+![](./assets/img/hojicha_vegan_2024.jpg) 
+
+Vegan hōjicha chocolate chip cookies, based on a recipe by Hojicha Co. (02/2024)
+
 ![](./assets/img/kormos_2023.jpg) 
 
 Lactose-free kormos/doukissa (09/2023)
@@ -26,9 +30,14 @@ New York-style bagels, based on a recipe by Claire Saffitz (01/2021)
 
 ![](./assets/img/chilicrab_2022.jpg) 
 
-Better reimagining of a Singaporean entrée. Chili crab based on a recipe presented by VisitSingapore  (11/2022)
+Shrimp scampi orzo with broccoli roast (02/2024)
+
+![](./assets/img/chilicrab_2022.jpg) 
+
+Better reimagining of a Singaporean entrée. Chili crab based on a recipe presented by VisitSingapore (11/2022)
 
 ![](./assets/img/cny_2021.jpg) 
+
 Three-course meal for Chinese New Year (02/2021)
 
 ![](./assets/img/chilicrab_2020.jpg) 
