@@ -19,7 +19,8 @@ layout: homepage
 
 ### In Preparation
 
-1. J.V. Moreno-Mayar, A.J. Aw, ..., Y. Deng, G. Kroonen, P. Grebenyuk, D. Meltzer, Y.S. Song, E. Willerslev (2024+). Historical ancient genomics shed light on the origins of present-day Siberians and their languages.
-
+3. A.J. Aw, Penn Medicine Biobank, I.N. Mathieson (2024+). Using partial polygenic scores to detect gene-by-ancestry interactions in recently admixed populations. 
+2. F. Zhou, A.J. Aw, D. Erdmann-Pham, J. Fischer, Y.S. Song (2024+). General non-parametric tests for differential gene expression analysis.
+1. J.V. Moreno-Mayar, A.J. Aw, Y. Deng, ..., G. Kroonen, P. Grebenyuk, D. Meltzer, Y.S. Song, E. Willerslev (2024+). Historical ancient genomics shed light on dynamic Holocene origins of Indigenous Siberians and their languages.
 
 [back](./)
