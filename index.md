@@ -15,7 +15,7 @@ I am a Postdoctoral Researcher with [Iain Mathieson](https://www.med.upenn.edu/m
 
 ## News
 
-- **[Nov. 2024]** Our work on causal effect heterogeneity between admixed individuals was selected as a Reviewer's Choice Poster for ASHG 2024! While we are busy performing analyses on the All Of Us Biobank, feel free to check out the poster [here](https://alanaw1.github.io/assets/files/AAw_ASHG2024_poster). 
+- **[Nov. 2024]** Our work on causal effect heterogeneity between admixed individuals was selected as a Reviewer's Choice Poster for ASHG 2024! While we are busy performing analyses on the All Of Us Biobank, feel free to check out the poster [here](https://alanaw1.github.io/assets/files/AAw_ASHG2024_poster.pdf). 
 - **[Aug. 2023]** New website is up!
 
 {% include_relative _includes/publications.md %}

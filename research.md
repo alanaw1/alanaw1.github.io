@@ -19,7 +19,7 @@ layout: homepage
 
 ### In Preparation
 
-3. A.J. Aw, Penn Medicine Biobank, I.N. Mathieson (2024+). Gene-ancestry interactions mediate individual heterogeneity in causal effects on complex traits in admixed populations. ([ASHG Reviewer's Choice Poster](https://alanaw1.github.io/assets/files/AAw_ASHG2024_poster))
+3. A.J. Aw, Penn Medicine Biobank, I.N. Mathieson (2024+). Gene-ancestry interactions mediate individual heterogeneity in causal effects on complex traits in admixed populations. ([ASHG Reviewer's Choice Poster](https://alanaw1.github.io/assets/files/AAw_ASHG2024_poster.pdf))
 2. F. Zhou, A.J. Aw, D. Erdmann-Pham, J. Fischer, Y.S. Song (2024+). Robust and adaptive non-parametric tests for detecting general distributional shifts in gene expression.
 1. J.V. Moreno-Mayar, A.J. Aw, Y. Deng, ..., G. Kroonen, P. Grebenyuk, D. Meltzer, Y.S. Song, E. Willerslev (2024+). Historical ancient genomics shed light on dynamic Holocene origins of Indigenous Siberians and their languages.
 
