@@ -4,6 +4,7 @@ layout: homepage
 
 ## Publications
 
+8. G. Benegas, C. Albors, A.J. Aw, C. Ye, Y.S. Song (2024). A DNA language model based on multi-species alignment predicts the effects of genome-wide variants. *Nature Biotechnology* (to appear). DOI: [10.1101/2023.10.10.561776](https://doi.org/10.1101/2023.10.10.561776) ([Code and Data](https://github.com/songlab-cal/gpn#gpn-msa))
 7. A.J. Aw, J.P. Spence & Y.S. Song (2024). A simple and flexible test of sample exchangeability with applications to statistical genomics. *Annals of Applied Statistics* **18** (1):858-881. DOI: [10.1214/23-AOAS1817](https://doi.org/10.1214/23-AOAS1817) (Software: [flintyR](https://cran.rstudio.com/web/packages/flintyR/index.html) and [flintyPy](https://pypi.org/project/flintypy/), [Code and Data](https://github.com/songlab-cal/flinty), [Tutorials](https://alanaw1.github.io/flintyR/))
 6. A.J. Aw, L.C. Jin, N.M. Ioannidis & Y.S. Song (2023). The impact of stability considerations on genetic fine-mapping. *eLife Reviewed Preprint*. DOI: [10.7554/eLife.88039.1](https://doi.org/10.7554/eLife.88039.1) ([Shiny App](https://alan-aw.shinyapps.io/stability_v0/), [Code and Data](https://github.com/songlab-cal/StableFM))
 5. T.C. Zeng, A.J. Aw & M.W. Feldman (2018). Cultural hitchhiking and competition between patrilineal kin groups explain the post-Neolithic Y-chromosome bottleneck. *Nature Communications* **9** (1): article no. 2077. DOI: [10.1038/s41467-018-04375-6](https://doi.org/10.1038/s41467-018-04375-6) ([Code and Data](https://github.com/alanaw1/CulturalHitchhiking))
@@ -15,12 +16,11 @@ layout: homepage
 ### Preprints / Under Review
 
 2. A.J. Aw, J.F. McRae, E. Rahmani & Y.S. Song (2024+). Highly parameterized polygenic scores tend to overfit to population stratification via random effects. *bioRXiv preprint*. DOI: [10.1101/2024.01.27.577589](https://doi.org/10.1101/2024.01.27.577589) ([Code and Data](https://github.com/songlab-cal/StratPGS), [Dashboard](https://alan-aw.shinyapps.io/stratPGS_v0/))
-1. G. Benegas, C. Albors, A.J. Aw, C. Ye, Y.S. Song (2023+). GPN-MSA: an alignment-based DNA language model for genome-wide variant effect prediction. *bioRXiv preprint*. DOI: [10.1101/2023.10.10.561776](https://doi.org/10.1101/2023.10.10.561776) ([Code and Data](https://github.com/songlab-cal/gpn#gpn-msa))
 
 ### In Preparation
 
-3. A.J. Aw, Penn Medicine Biobank, I.N. Mathieson (2024+). Using partial polygenic scores to detect gene-by-ancestry interactions in recently admixed populations. 
-2. F. Zhou, A.J. Aw, D. Erdmann-Pham, J. Fischer, Y.S. Song (2024+). General non-parametric tests for differential gene expression analysis.
+3. A.J. Aw, Penn Medicine Biobank, I.N. Mathieson (2024+). Gene-ancestry interactions mediate individual heterogeneity in causal effects on complex traits in admixed populations. ([ASHG Reviewer's Choice Poster](https://alanaw1.github.io/assets/files/AAw_ASHG2024_poster))
+2. F. Zhou, A.J. Aw, D. Erdmann-Pham, J. Fischer, Y.S. Song (2024+). Robust and adaptive non-parametric tests for detecting general distributional shifts in gene expression.
 1. J.V. Moreno-Mayar, A.J. Aw, Y. Deng, ..., G. Kroonen, P. Grebenyuk, D. Meltzer, Y.S. Song, E. Willerslev (2024+). Historical ancient genomics shed light on dynamic Holocene origins of Indigenous Siberians and their languages.
 
 [back](./)
