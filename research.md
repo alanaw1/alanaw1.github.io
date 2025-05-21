@@ -2,7 +2,7 @@
 layout: homepage
 ---
 
-*A 🏋🏻‍♂️ (representing "heavy lifting") indicates (co-)first authorship. Though, science is a team sport. Maths papers are ordered alphabetically by last name.*
+*A 🏋🏻‍♂️ (representing "heavy lifting") indicates (co-)first authorship. Though, science is a team effort. Maths papers are ordered alphabetically by last name.*
 
 ## Publications
 
@@ -17,13 +17,13 @@ layout: homepage
 
 ### Preprints / Under Review
 
+3. R. Mandla, Z. Shi, K. Hou, Y. Wang, G. Mies, A.J. Aw, S. Cullina, Penn Medicine Biobank, E. Kenny, E. Atkinson, A.R. Martin and B. Pasaniuc (2025+). Large-scale admixture mapping in the All of Us Research Program improves the characterization of cross-population phenotypic differences. *medRXiv preprint*. DOI: []()
 2. 🏋🏻‍♂️ F. Zhou, A.J. Aw, D. Erdmann-Pham, J. Fischer, Y.S. Song (2025+). Robust and adaptive non-parametric tests for detecting general distributional shifts in gene expression. *bioRXiv preprint*. DOI: [10.1101/2025.03.06.641952](https://doi.org/10.1101/2025.03.06.641952) (Software: [QRScore](https://github.com/songlab-cal/QRscore))
 1. 🏋🏻‍♂️ A.J. Aw, J.F. McRae, E. Rahmani & Y.S. Song (2024+). Highly parameterized polygenic scores tend to overfit to population stratification via random effects. *bioRXiv preprint*. DOI: [10.1101/2024.01.27.577589](https://doi.org/10.1101/2024.01.27.577589) ([Code and Data](https://github.com/songlab-cal/StratPGS), [Dashboard](https://alan-aw.shinyapps.io/stratPGS_v0/))
 
 ### In Preparation
 
-3. R. Mandla, Z. Shi, K. Hou, Y. Wang, G. Mies, A.J. Aw, I.N. Mathieson, E. Atkinson, A.R. Martin and B. Pasaniuc (2025+). Large-scale admixture mapping in the All of Us Research Program improves the characterization of cross-population phenotypic differences. 
-2. 🏋🏻‍♂️ A.J. Aw, R. Mandla, Z. Shi, Penn Medicine Biobank, B. Pasaniuc, I.N. Mathieson (2025+). Gene-ancestry interactions moderate individual causal effects on complex traits in admixed populations. ([ASHG Reviewer's Choice Poster](https://alanaw1.github.io/assets/files/AAw_ASHG2024_poster.pdf))
+2. 🏋🏻‍♂️ A.J. Aw, R. Mandla, Z. Shi, Penn Medicine Biobank, B. Pasaniuc, I.N. Mathieson (2025+). Hidden structure in polygenic scores and the challenge of disentangling ancestry interactions in admixed populations. ([ASHG Reviewer's Choice Poster](https://alanaw1.github.io/assets/files/AAw_ASHG2024_poster.pdf))
 1. 🏋🏻‍♂️ J.V. Moreno-Mayar, A.J. Aw, Y. Deng, ..., G. Kroonen, P. Grebenyuk, D. Meltzer, Y.S. Song, E. Willerslev (2025+). Historical ancient genomics shed light on dynamic Holocene origins of Indigenous Siberians and their languages.
 
 [back](./)
