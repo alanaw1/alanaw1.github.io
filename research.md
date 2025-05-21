@@ -17,7 +17,7 @@ layout: homepage
 
 ### Preprints / Under Review
 
-3. R. Mandla, Z. Shi, K. Hou, Y. Wang, G. Mies, A.J. Aw, S. Cullina, Penn Medicine Biobank, E. Kenny, E. Atkinson, A.R. Martin and B. Pasaniuc (2025+). Large-scale admixture mapping in the All of Us Research Program improves the characterization of cross-population phenotypic differences. *medRXiv preprint*. DOI: []()
+3. R. Mandla, Z. Shi, K. Hou, Y. Wang, G. Mies, A.J. Aw, S. Cullina, Penn Medicine Biobank, E. Kenny, E. Atkinson, A.R. Martin and B. Pasaniuc (2025+). Large-scale admixture mapping in the All of Us Research Program improves the characterization of cross-population phenotypic differences. *medRXiv preprint*. DOI: [10.1101/2025.04.02.25325115](https://doi.org/10.1101/2025.04.02.25325115)
 2. 🏋🏻‍♂️ F. Zhou, A.J. Aw, D. Erdmann-Pham, J. Fischer, Y.S. Song (2025+). Robust and adaptive non-parametric tests for detecting general distributional shifts in gene expression. *bioRXiv preprint*. DOI: [10.1101/2025.03.06.641952](https://doi.org/10.1101/2025.03.06.641952) (Software: [QRScore](https://github.com/songlab-cal/QRscore))
 1. 🏋🏻‍♂️ A.J. Aw, J.F. McRae, E. Rahmani & Y.S. Song (2024+). Highly parameterized polygenic scores tend to overfit to population stratification via random effects. *bioRXiv preprint*. DOI: [10.1101/2024.01.27.577589](https://doi.org/10.1101/2024.01.27.577589) ([Code and Data](https://github.com/songlab-cal/StratPGS), [Dashboard](https://alan-aw.shinyapps.io/stratPGS_v0/))
 
