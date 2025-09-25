@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Postdoctoral Researcher with [Iain Mathieson](https://www.med.upenn.edu/mathieson-lab/) at the Department of Genetics, where I also work with [Bogdan Pasaniuc](). I earned my PhD in [Statistics](https://statistics.berkeley.edu/) at UC Berkeley. I obtained my undergraduate degree in [Mathematical and Computational Science](https://mcs.stanford.edu/) (with Honors in Mathematical Biology) at Stanford. I am a [science communication](./scicomm.md) advocate, and I enjoy [baking and cooking](./food.md) whenever time permits.      
+I am a Postdoctoral Researcher with [Iain Mathieson](https://www.med.upenn.edu/mathieson-lab/) at the Department of Genetics, where I also work with [Bogdan Pasaniuc](https://www.med.upenn.edu/ccb/) at the recently established Center for Computational Biomedicine. I earned my PhD in [Statistics](https://statistics.berkeley.edu/) at UC Berkeley. I obtained my undergraduate degree in [Mathematical and Computational Science](https://mcs.stanford.edu/) (with Honors in Mathematical Biology) at Stanford. I am a [science communication](./scicomm.md) advocate, and I enjoy [baking and cooking](./food.md) whenever time permits.      
 
 ## Research Interests
 
