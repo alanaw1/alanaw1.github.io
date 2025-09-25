@@ -4,12 +4,12 @@ layout: homepage
 
 ## About Me
 
-I am a Postdoctoral Researcher with [Iain Mathieson](https://www.med.upenn.edu/mathieson-lab/) at the Department of Genetics. I recently completed my PhD in [Statistics](https://statistics.berkeley.edu/) at UC Berkeley, where I worked with Yun Song and Nilah Ioannidis. I obtained my undergraduate degree in [Mathematical and Computational Science](https://mcs.stanford.edu/) (with Honors in Mathematical Biology) at Stanford. I am a [science communication](./scicomm.md) advocate, and I enjoy [baking and cooking](./food.md) whenever time permits.      
+I am a Postdoctoral Researcher with [Iain Mathieson](https://www.med.upenn.edu/mathieson-lab/) at the Department of Genetics, where I also work with [Bogdan Pasaniuc](). I earned my PhD in [Statistics](https://statistics.berkeley.edu/) at UC Berkeley. I obtained my undergraduate degree in [Mathematical and Computational Science](https://mcs.stanford.edu/) (with Honors in Mathematical Biology) at Stanford. I am a [science communication](./scicomm.md) advocate, and I enjoy [baking and cooking](./food.md) whenever time permits.      
 
 ## Research Interests
 
 - **Human Statistical Genomics:** population stratification detection, polygenic score transferability, genetic fine-mapping, variant effect predictor operationalization     
-- **Computational Biology:** differential expression analysis, models of evolution and demographic inference    
+- **Mathematical and Computational Biology:** differential expression analysis, models of evolution, demographic inference, mathematical questions motivated by biological modeling     
 
 ## [Publications](./research.md)
 
