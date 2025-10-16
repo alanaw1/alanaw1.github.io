@@ -16,13 +16,15 @@ layout: homepage
 2. ᵅA.J. Aw (2014). The multicovering radius problem for some types of discrete structures. *Designs, Codes and Cryptography* **72** (2): 195-209. DOI: [10.1007/s10623-012-9755-6](https://doi.org/10.1007/s10623-012-9755-6) 
 1. ᵅA.J. Aw (2012). The Turán number and probabilistic combinatorics. *The American Mathematical Monthly* **119** (6): 510-513. DOI: [10.4169/amer.math.monthly.119.06.510](https://doi.org/10.4169/amer.math.monthly.119.06.510)
 
-### Preprints / Under Review
+### Under Review or Revision
 
-2. R. Mandla, Z. Shi, K. Hou, Y. Wang, G. Mies, A.J. Aw, S. Cullina, Penn Medicine Biobank, E. Kenny, E. Atkinson, A.R. Martin and B. Pasaniuc (2025+). Large-scale admixture mapping in the All of Us Research Program improves the characterization of cross-population phenotypic differences. *medRXiv preprint*. DOI: [10.1101/2025.04.02.25325115](https://doi.org/10.1101/2025.04.02.25325115)
+3. ★J.V. Moreno-Mayar, A.J. Aw, Y. Deng, P. Grebenyuk, ..., G. Kroonen, D. Meltzer, Y.S. Song, E. Willerslev (2025+). Historical ancient genomics shed light on dynamic Holocene origins of Indigenous Siberians and their languages.
+2. R. Mandla, Z. Shi, K. Hou, Y. Wang, G. Mies, A.J. Aw, S. Cullina, Penn Medicine Biobank, E. Kenny, I. Mathieson, E. Atkinson, A.R. Martin and B. Pasaniuc (2025+). Large-scale admixture mapping in the All of Us Research Program improves the characterization of cross-population phenotypic differences. *medRXiv preprint*. DOI: [10.1101/2025.04.02.25325115](https://doi.org/10.1101/2025.04.02.25325115)
 1. ★A.J. Aw, J.F. McRae, E. Rahmani & Y.S. Song (2024+). Highly parameterized polygenic scores tend to overfit to population stratification via random effects. *bioRXiv preprint*. DOI: [10.1101/2024.01.27.577589](https://doi.org/10.1101/2024.01.27.577589) ([Code and Data](https://github.com/songlab-cal/StratPGS), [Dashboard](https://alan-aw.shinyapps.io/stratPGS_v0/))
 
 ### In Preparation
 
-1. ★J.V. Moreno-Mayar, A.J. Aw, Y. Deng, ..., G. Kroonen, P. Grebenyuk, D. Meltzer, Y.S. Song, E. Willerslev (2025+). Historical ancient genomics shed light on dynamic Holocene origins of Indigenous Siberians and their languages.
+1. A.J. Aw. Admixed array combinatorics. 
+
 
 [back](./)

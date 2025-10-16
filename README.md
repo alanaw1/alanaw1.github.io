@@ -28,7 +28,7 @@ A template for Max Planck Institute for Informatics is available here: [[link](h
 ```
 .
 ├── _data                    
-|   └── publications.yml                      # the YAML file for publications
+|   └── publications.yml                      # the YAML file for publications (changes the featured work on main page)
 ├── _includes                    
 |   ├── publications.md                       # the Markdown file for publications
 |   └── services.md                           # the Markdown file for services
@@ -151,7 +151,7 @@ font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
-google_analytics: UA-111540567-4
+google_analytics: 
   ```
 ### Edit `index.md`
 
