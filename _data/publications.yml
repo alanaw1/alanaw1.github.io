@@ -2,11 +2,11 @@ main:
 
   - title: Hidden structure in polygenic scores and the challenge of disentangling ancestry interactions in admixed populations
     authors: Alan J. Aw, Ravi Mandla, Zhuozheng Shi, Penn Medicine Biobank, Bogdan Pasaniuc, Iain Mathieson
-    conference_short: Genetics.
+    conference_short: Genetics
     conference: Genetics
     pdf: https://doi.org/10.1093/genetics/iyaf213
     code: https://github.com/mathilab/GxA_Interaction
-    notes: In Press
+    notes: Volume 231 (Featured Article)
     image: ./assets/img/Genetics_2025_hidden.jpg
 
   - title: A simple and flexible test of sample exchangeability with applications to statistical genomics
@@ -18,3 +18,12 @@ main:
     page: https://alanaw1.github.io/flintyR 
     notes: Volume 18, pp. 858-881
     image: ./assets/img/AoAS_2023_simple.jpeg
+
+  - title: The impact of stability considerations on genetic fine-mapping
+    authors: Alan J. Aw, Lionel C. Jin, Nilah M. Ioannidis, Yun S. Song
+    conference_short: eLife
+    conference: eLife
+    pdf: https://doi.org/10.7554/eLife.88039.2
+    code: https://github.com/songlab-cal/StableFM
+    notes: RP88039
+    image: ./assets/img/eLife_2023_impact.jpg
