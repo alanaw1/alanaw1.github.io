@@ -1,0 +1,55 @@
+# Basic Information 
+title: Alan Aw
+position: Postdoctoral Researcher
+affiliation: University of Pennsylvania
+email: nalawanij (at) gmail.com
+
+# Search Engine Optimization (SEO)
+# The following information is used to improve the website traffic from search engines, e.g., Google.
+keywords: alan_aw, statistical_genetics, statistics, bioinformatics
+description: Alan Aw's personal website, adapted from Minimal Light Theme
+canonical: https://alanaw1.github.io
+
+# Links 
+# If you don't need one of them, you may delete the corresponding line.
+cv_link: assets/files/alan_spring2026.pdf
+github_link: https://github.com/alanaw1
+linkedin: https://www.linkedin.com/in/alan-aw-2a509b89/
+
+# Images (e.g., your profile picture and your website's favicon) 
+# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
+avatar: ./assets/img/2023_spring_headshot.jpeg
+favicon: ./assets/img/bitmoji.jpg
+favicon_dark: ./assets/img/bitmoji-dark.jpg
+
+# Footnote
+# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
+enable_footnote: true
+
+# Auto Dark Mode
+# You may use the option to disable the automatic dark theme
+auto_dark_mode: true
+
+# Font
+# You can use this option to choose between Serif or Sans Serif fonts.
+font: "Sans Serif" # or "Sans Serif"
+
+# Google Analytics ID
+# Please remove this if you don't use Google Analytics
+google_analytics: G-9Y7K3YPEL6
+
+# Use this project as a remote theme for GitHub Pages
+# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+remote_theme: yaoyao-liu/minimal-light
+
+# The following files will be removed from the generated website.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - README_zh_Hans.md
+  - README_zh_Hant.md
+  - README_de.md
+  - LICENSE
+  - minimal-light.gemspec
+  - html_source_file/
