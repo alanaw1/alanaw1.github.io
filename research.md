@@ -5,6 +5,7 @@ layout: homepage
 *(Co-)first authorship papers demonstrating significant contributions indicated by a star (★). But note that good science requires team effort. Maths papers are ordered alphabetically (α) by last name.*
 
 ## Publications
+11. R. Mandla, Z. Shi, K. Hou, Y. Wang, G. Mies, A.J. Aw, S. Cullina, Penn Medicine Biobank, E. Kenny, I. Mathieson, E. Atkinson, A.R. Martin and B. Pasaniuc (2025+). Large-scale admixture mapping in the All of Us Research Program improves the characterization of cross-population phenotypic differences. *Accepted in principle at Nature Communications*. DOI: [10.1101/2025.04.02.25325115](https://doi.org/10.1101/2025.04.02.25325115)
 10. ★A.J. Aw, R. Mandla, Z. Shi, Penn Medicine Biobank, B. Pasaniuc, I. Mathieson (2025). Hidden structure in polygenic scores and the challenge of disentangling ancestry interactions in admixed populations. *Genetics* **231** (4): iyaf213. DOI: [10.1093/genetics/iyaf213](https://doi.org/10.1093/genetics/iyaf213) ([ASHG 2024 Reviewer's Choice](https://www.ashg.org/wp-content/uploads/2024/10/ASHG2024-PosterAbstracts.pdf); [STATGEN 2025 Slides](https://alanaw1.github.io/assets/files/AAw_STATGEN2025_SlideDeck.pdf); [Code and Data](https://github.com/mathilab/GxA_Interaction))
 9. ★F. Zhou, A.J. Aw, D. Erdmann-Pham, J. Fischer, Y.S. Song (2025). Robust and adaptive non-parametric tests for detecting general distributional shifts in gene expression. *Cell Reports Methods* **5** (9): 1-12. DOI: [10.1016/j.crmeth.2025.101147](https://doi.org/10.1016/j.crmeth.2025.101147) (Software: QRScore ([Bioconductor](https://doi.org/doi:10.18129/B9.bioc.QRscore),[Github](https://github.com/songlab-cal/QRscore)))
 8. G. Benegas, C. Albors, A.J. Aw, C. Ye, Y.S. Song (2025). A DNA language model based on multi-species alignment predicts the effects of genome-wide variants. *Nature Biotechnology*. DOI: [10.1038/s41587-024-02511-w](https://doi.org/10.1038/s41587-024-02511-w) ([Code and Data](https://github.com/songlab-cal/gpn#gpn-msa), [VEP Scores](https://huggingface.co/collections/songlab/gpn-msa-65319280c93c85e11c803887))
@@ -18,9 +19,8 @@ layout: homepage
 
 ### Under Review or Revision
 
-4. ᵅA.J. Aw (2026+). Asymptotic enumeration of admixed arrays and a different independence heuristic. (Software: [zagar](https://alanaw1.github.io/zagar), [Github](https://github.com/alanaw1/zagar)) 
-3. ★J.V. Moreno-Mayar, A.J. Aw, Y. Deng, P. Grebenyuk, ..., G. Kroonen, D. Meltzer, Y.S. Song, E. Willerslev (2025+). Historical ancient genomics shed light on dynamic Holocene origins of Indigenous Siberians and their languages.
-2. R. Mandla, Z. Shi, K. Hou, Y. Wang, G. Mies, A.J. Aw, S. Cullina, Penn Medicine Biobank, E. Kenny, I. Mathieson, E. Atkinson, A.R. Martin and B. Pasaniuc (2025+). Large-scale admixture mapping in the All of Us Research Program improves the characterization of cross-population phenotypic differences. *medRXiv preprint*. DOI: [10.1101/2025.04.02.25325115](https://doi.org/10.1101/2025.04.02.25325115)
+3. ᵅA.J. Aw (2026+). Asymptotic enumeration of admixed arrays and a different independence heuristic. DOI: [10.48550/arXiv.2604.08857](https://doi.org/10.48550/arXiv.2604.08857) (Software: [zagar](https://alanaw1.github.io/zagar), [Github](https://github.com/alanaw1/zagar)) 
+2. ★J.V. Moreno-Mayar, A.J. Aw, P. Grebenyuk, Y. Deng, ..., G. Kroonen, D. Meltzer, Y.S. Song, E. Willerslev (2025+). Ethnohistorical genomics uncover the Holocene origins of Indigenous Siberians.
 1. ★A.J. Aw, J.F. McRae, E. Rahmani & Y.S. Song (2024+). Highly parameterized polygenic scores tend to overfit to population stratification via random effects. *bioRXiv preprint*. DOI: [10.1101/2024.01.27.577589](https://doi.org/10.1101/2024.01.27.577589) ([Code and Data](https://github.com/songlab-cal/StratPGS), [Dashboard](https://alan-aw.shinyapps.io/stratPGS_v0/))
 
 ### In Preparation
