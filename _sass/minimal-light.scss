@@ -216,7 +216,7 @@ papertitle {
 
       .image.avatar img {
         border-radius: 100%;
-        width: 45%;
+        width: 65%;
         padding: 20px;
         // border: 1px solid #ddd;
         // padding: 3px;
@@ -243,8 +243,8 @@ h1 {
 h2 {
   color:#043361;
   font-weight: 500;
-  margin:2px 0px 15px;
-  font-size: 157%;
+  margin:2px 0px 18px;
+  font-size: 175%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -266,16 +266,16 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:32px;
 }
 
 a {
-  color:#39c;
+  color:#0066aa;
   text-decoration:none;
 }
 
 a:hover {
-  color:#069;
+  color:#004477;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -432,7 +432,7 @@ header ul a strong {
 }
 
 section {
-  width:650px;
+  width:675px;
   float:right;
   padding-top:4.0em;
   padding-bottom:50px;
@@ -500,7 +500,7 @@ footer {
 
    .image.avatar img {
         border-radius: 100%;
-        width: 117px;
+        width: 140px;
         padding:20px;
       }
   #head1o2 {
@@ -556,7 +556,7 @@ footer {
 
   .image.avatar img {
       border-radius: 100%;
-      width: 95px;
+      width: 115px;
       padding:20px;
   }
   #head1o2 {
